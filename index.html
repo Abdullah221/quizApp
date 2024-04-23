@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App Development Task</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon-removebg-preview.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 text-center">
+                <h1><span class="bold">QUIZ</span> APP</h1>
+                <p class="text-white">Welcome to our new Quiz App</p>
+                <hr class="divider">
+                <i class="fa-solid fa-circle-user icon-user"></i><br>
+                <form action="" id="myForm" class="text-start">
+                    <label for="rollNumber">Roll Number</label>
+                    <input type="number" placeholder="Roll number" id="rollNumber" class="border-0"><br>
+                    <label for="fullName">Full Name</label>
+                    <input type="text" placeholder="Enter your name here." id="fullName" class="border-0"><br>
+                    <label for="select">Your Batch:</label>
+                    <select name="" id="select" class="border-0">
+                        <option value="WMA-B1">WMA-B1</option>
+                        <option value="WMA-B2">WMA-B2</option>
+                        <option value="WMA-B3">WMA-B3</option>
+                        <option value="WMA-B4">WMA-B4</option>
+                    </select>
+                    <label for="section">Section:</label>
+                    <select name="" id="section" class="border-0">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select><br>
+                    <input type="submit" onclick="saveData()" class="submitButton">
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <!-- <img src="img/blue-question-mark-background-with-text-space-quiz-symbol-vector.jpg" alt="Quiz"> -->
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/2be14bd63e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        function saveData() {
+    event.preventDefault(); // Now you can safely use event
+
+    // Get values from input fields
+    var rollNumber = document.getElementById("rollNumber").value;
+    var fullName = document.getElementById("fullName").value;
+    var batch = document.getElementById("select").value;
+    var section = document.getElementById("section").value;
+
+    // Do something with the data (e.g., store in variables, send to server, etc.)
+    console.log("Roll Number: " + rollNumber);
+    console.log("Full Name: " + fullName);
+    console.log("Batch: " + batch);
+    console.log("Section: " + section);
+
+    // Store fullName in localStorage
+    localStorage.setItem("fullName", fullName);
+    localStorage.setItem("rollNumber", rollNumber);
+    localStorage.setItem("batch", batch);
+    localStorage.setItem("section", section);
+
+    // Open QuizPage.index in a new tab/window
+    window.open("QuizPage.html", "_blank");
+    }
+    </script>
+</body>
+</html>

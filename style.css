@@ -1,0 +1,38 @@
+body {
+    width: 100vw;
+    background: url(img/blue-question-mark-background-with-text-space-quiz-symbol-vector.jpg) no-repeat;
+    background-size: cover;
+    background-position: right bottom;
+    height: 100vh;
+}
+.icon-user {
+    font-size: 5em;
+    color: #fff;
+    margin: 20px auto;
+}
+form {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    outline: skyblue;
+}
+.submitButton {
+    background-color: skyblue;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.form2 {
+    margin: 0px;
+}
+.bold {
+    font-weight: bold;
+    color: #fff;
+}
+form input {
+    margin: 10px;
+}
